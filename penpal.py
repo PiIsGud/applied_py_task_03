@@ -54,6 +54,7 @@ class PenPal(Person):
     def read(self):
         if self.letter is not None:
             self.decrypt()
+            self.letter.is_read = True
             return f"the letter reads: {self.letter.message}"
 
 
