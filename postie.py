@@ -2,8 +2,11 @@
 FileName: ./postie.py
 
     Class Description:
+        Postie Class inherits from Person class
 
     Functional Requirements:
+        - Receives letter from the post office
+        - delivers letter from post office to the recipient PenPal Letterbox
 
     Revision:
 
@@ -23,5 +26,5 @@ class Postie(Person):
         post_office.letter = None
 
     def deliver_letter(self, receiver: "PenPal"):
-        super().deliver_letter(receiver)
+        super().deliver_letter(receiver.letter_box)
         

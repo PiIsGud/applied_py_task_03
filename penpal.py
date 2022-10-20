@@ -1,5 +1,5 @@
 """
-FileName: ./pyfiles/PenPal.py
+FileName: ./penpal.py
 
 Py file for PenPal class
 
@@ -50,6 +50,8 @@ class PenPal(Person):
 
     def retrieve_letter(self):
         self.letter = self.letter_box.letter
+        self.letter_box.letter = None
+        self.letter_box.flag_raised = False
 
     def read(self):
         if self.letter is not None:

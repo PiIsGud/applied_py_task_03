@@ -1,5 +1,5 @@
 """
-FileName: ./pyfiles/Person.py
+FileName: ./person.py
 
 Py file for Person Class
 

@@ -1,3 +1,16 @@
+"""
+FileName ./encryptor.py
+
+    Class Description:
+    Encryptor class will contain two static methods:
+    - encrypt
+    - decrypt
+    Encryptor class will be used by PenPal class (Alice and Bob)
+
+By: Yoseph Campbell
+Student ID: 20085059
+Date Created: 20/10/2022
+"""
 class Encryptor:
 
     @staticmethod
@@ -20,12 +33,3 @@ class Encryptor:
             decrypted_message += value
         return decrypted_message
 
-if __name__ == "__main__":
-    origin_message = "hi"
-    encrypted_msg = Encryptor.encrypt(origin_message)
-    decrypted_msg = Encryptor.decrypt(encrypted_msg)
-
-    if decrypted_msg == origin_message:
-        print("it works")
-    else:
-        print(f"it failed\noriginal: {origin_message}\nresult: {decrypted_msg}")

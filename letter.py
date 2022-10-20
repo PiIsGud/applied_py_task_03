@@ -1,5 +1,5 @@
 """
-FileName: ./pyfiles/Letter.py
+FileName: ./letter.py
 
 Py file for Letter class
 

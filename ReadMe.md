@@ -34,17 +34,20 @@ classDiagram
         +get_letter_from_letterbox()
         +encrypt()
         +decrypt()
-        +read_letter()
+        +read()
+        +retrieve_letter()
     }
     
     
     class Postie{
         +receive_letter()
+        +deliver_letter()
     }
     
     class LetterBox{
         +Letter letter
         +bool flag_raised
+        +raise_flag()
     }
     
     class Letter{
@@ -61,6 +64,5 @@ classDiagram
     
     class PostOffice{
         +Letter letter
-        +notify_postie()
     }
 ```
