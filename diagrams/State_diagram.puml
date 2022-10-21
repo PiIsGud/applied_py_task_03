@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+/'scale 350 width
+[*] --> NotShooting
+
+state NotShooting {
+  [*] --> Idle
+  Idle --> Configuring : EvConfig
+  Configuring --> Idle : EvConfig
+}
+
+state Configuring {
+  [*] --> NewValueSelection
+  NewValueSelection --> NewValuePreview : EvNewValue
+  NewValuePreview --> NewValueSelection : EvNewValueRejected
+  NewValuePreview --> NewValueSelection : EvNewValueSaved
+
+  state NewValuePreview {
+     State1 -> State2
+  }
+
+}'/
+[*] --> HasLetters: Letter is received in PostOffice
+[*] --> HasLetters: Letter is None in PostOffice
+state HasLetters {
+    HasLetters: Set to False if Letts is Not None
+    HasLetters: Set to True if Letters is None
+}
+
+@enduml
